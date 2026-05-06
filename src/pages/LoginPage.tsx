@@ -3,7 +3,7 @@ import { callApi } from '../lib/api'
 import { toast } from '../lib/toast'
 import type { LoginPayload } from '../types'
 
-const API_BASE = 'http://10.251.4.199:5000'
+const API_BASE = import.meta.env.VITE_API_BASE ?? ''
 
 interface Props {
   onLogin: (token: string) => void

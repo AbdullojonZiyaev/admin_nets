@@ -5,7 +5,7 @@ import { LainApp } from './layouts/LainApp'
 import { NormalApp } from './layouts/NormalApp'
 
 const TOKEN_KEY = 'nets_token'
-const BASE      = ''
+const BASE      = import.meta.env.VITE_API_BASE ?? ''
 
 type Mode = 'lain' | 'normal'
 
