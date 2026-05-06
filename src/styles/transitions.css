@@ -1,0 +1,18 @@
+@keyframes theme-wipe-out{
+  0%{opacity:1;transform:none;filter:none}
+  30%{opacity:.8;transform:scaleY(1.01);filter:brightness(1.5)}
+  60%{opacity:.3;transform:scaleY(0.98);filter:brightness(2) blur(2px)}
+  100%{opacity:0;transform:scaleY(0.97);filter:brightness(3) blur(4px)}
+}
+@keyframes theme-wipe-in{
+  0%{opacity:0;transform:scaleY(0.97);filter:brightness(3) blur(4px)}
+  40%{opacity:.5;transform:scaleY(1.01);filter:brightness(1.5) blur(1px)}
+  100%{opacity:1;transform:none;filter:none}
+}
+#theme-transition-overlay{
+  position:fixed;inset:0;z-index:9990;pointer-events:none;
+  background:#EA3E2A;opacity:0;
+}
+#theme-transition-overlay.flash{animation:none;opacity:1}
+.app-leaving{animation:theme-wipe-out .25s ease forwards}
+.app-entering{animation:theme-wipe-in .3s ease forwards}
